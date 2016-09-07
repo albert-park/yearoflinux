@@ -1,0 +1,25 @@
+        <article class="{{post_class}}">
+            <header class="post-header">
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+          {{!--       <section class="post-meta">
+                    <span class="author-name">by <strong>{{author}}</strong></span>
+                    &nbsp&nbsp&nbsp
+                    <time datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago='true'}}</time>
+                    &nbsp&nbsp&nbsp under
+                    <span><strong>{{tags separator=", "}}</strong></span>
+                </section> --}}
+            {{> post-meta}}
+            </header>
+            <div class="post-preview-wrapper">
+                <img src="{{image}}" alt="" class="post-preview-image" style="width: 100%; height:auto; margin-bottom: 15px;">
+                <div class="post-preview-text" style="width: 100%;">
+                    <section class="post-excerpt top-post-excerpt">
+                        <p>{{excerpt words="35"}}&hellip;</p>
+                    </section>
+                    <footer class="more-links">
+                        <a class="read-more button-save" href="{{url}}">Read More</a>
+                    </footer>
+                </div>
+            </div>
+
+        </article>

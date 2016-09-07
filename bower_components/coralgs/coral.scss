@@ -1,0 +1,137 @@
+/*
+  Coral! Grid System v1.0.1
+  MIT License
+  coralgs.com | https://github.com/karlpablo/coralgs/
+*/
+
+$mobile:      '(max-width: 767px)';
+$tablet:      '(min-width: 768px)';
+$desktop:     '(min-width: 992px)';
+$widescreen:  '(min-width: 1200px)';
+
+$padding: 15px;
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  @include clearfix();
+  padding-right: $padding;
+  padding-left: $padding;
+  margin-right: auto;
+  margin-left: auto;
+
+  .row {
+    @include clearfix();
+    margin-right: $padding * -1;
+    margin-left: $padding * -1;  
+
+    .col {
+      position: relative;
+      min-height: 1px;
+      padding-right: $padding;
+      padding-left: $padding;
+      float: left;
+
+      .spacer {
+        padding: $padding/4;
+
+        @media #{$tablet} {
+          padding: $padding/2;
+        }
+
+        @media #{$tablet} {
+          padding: $padding;
+        }
+      }
+    }
+  }
+}
+
+.m12  { width: 100%; }
+.m11  { width: 91.66666667%; }
+.m10  { width: 83.33333333%; }
+.m9   { width: 75%; }
+.m8   { width: 66.66666667%; }
+.m7   { width: 58.33333333%; }
+.m6   { width: 50%; }
+.m5   { width: 41.66666667%; }
+.m4   { width: 33.33333333%; }
+.m3   { width: 25%; }
+.m2   { width: 16.66666667%; }
+.m1   { width: 8.33333333%; }
+.m0   { display: none; }
+
+@media #{$tablet} {
+  .container  { width: 750px; }
+  .t12  { width: 100%; }
+  .t11  { width: 91.66666667%; }
+  .t10  { width: 83.33333333%; }
+  .t9   { width: 75%; }
+  .t8   { width: 66.66666667%; }
+  .t7   { width: 58.33333333%; }
+  .t6   { width: 50%; }
+  .t5   { width: 41.66666667%; }
+  .t4   { width: 33.33333333%; }
+  .t3   { width: 25%; }
+  .t2   { width: 16.66666667%; }
+  .t1   { width: 8.33333333%; }
+
+  .m0   { display: block; }
+  .t0   { display: none; }
+}
+
+@media #{$desktop} {
+  .container  { width: 970px; }
+  .d12  { width: 100%; }
+  .d11  { width: 91.66666667%; }
+  .d10  { width: 83.33333333%; }
+  .d9   { width: 75%; }
+  .d8   { width: 66.66666667%; }
+  .d7   { width: 58.33333333%; }
+  .d6   { width: 50%; }
+  .d5   { width: 41.66666667%; }
+  .d4   { width: 33.33333333%; }
+  .d3   { width: 25%; }
+  .d2   { width: 16.66666667%; }
+  .d1   { width: 8.33333333%; }
+
+  .m0   { display: block; }
+  .t0   { display: block; }
+  .d0   { display: none; }
+}
+
+@media #{$widescreen} {
+  .container  { width: 1170px; }
+  .w12  { width: 100%; }
+  .w11  { width: 91.66666667%; }
+  .w10  { width: 83.33333333%; }
+  .w9   { width: 75%; }
+  .w8   { width: 66.66666667%; }
+  .w7   { width: 58.33333333%; }
+  .w6   { width: 50%; }
+  .w5   { width: 41.66666667%; }
+  .w4   { width: 33.33333333%; }
+  .w3   { width: 25%; }
+  .w2   { width: 16.66666667%; }
+  .w1   { width: 8.33333333%; }
+
+  .m0   { display: block; }
+  .t0   { display: block; }
+  .d0   { display: block; }
+  .w0   { display: none; }
+}

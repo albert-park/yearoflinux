@@ -1,0 +1,62 @@
+.namecheap-box {
+  @extend .twitter-box;
+  @extend .twitter-box-dev;
+
+  .link-wrapper {
+    text-decoration: none;
+  }
+
+  img.namecheap-box-coverpic {
+    border: 1px solid #eee;
+  }
+  .namecheap-box-profilepic {
+    img {
+      width: 70px;
+      margin-top: 15px;
+    }
+  }
+}
+
+.namecheap-box-content {
+  @extend .twitter-box-content;
+  padding: 15px 30px;
+
+  > h4 {
+    margin: 1rem;
+  }
+
+  > p {
+    margin: 1rem 0 !important;
+  }
+
+  > a {
+    margin: 1rem 0;
+  }
+
+  .button-add {
+    width: 85%;
+  }
+
+}
+
+.namecheap-box-profilepic {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+
+  text-align: center;
+
+  border-radius: 100%;
+  background: $white;
+
+  img {
+    width: 80%;
+    height: auto;
+    margin-top: 6px;
+  }
+}

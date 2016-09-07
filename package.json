@@ -1,0 +1,55 @@
+{
+  "name": "bloggy",
+  "description": "Branding theme for Ghost",
+  "homepage": "https://github.com/Kikobeats/bloggy",
+  "version": "1.1.0",
+  "main": "./index.js",
+  "author": {
+    "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
+    "url": "https://github.com/Kikobeats"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/bloggy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kikobeats/bloggy/issues"
+  },
+  "keywords": [
+    "Blog",
+    "Brand",
+    "Ghost",
+    "Theme"
+  ],
+  "dependencies": {
+    "flickity": "^1.2.1"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "latest",
+    "browser-sync": "latest",
+    "coffee-script": "latest",
+    "gulp": "latest",
+    "gulp-add-src": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-changed": "latest",
+    "gulp-coffee": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssmin": "latest",
+    "gulp-header": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-sass": "latest",
+    "gulp-shorthand": "latest",
+    "gulp-strip-css-comments": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "underscore.string": "latest"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "scripts": {
+    "test": "sh test/test.sh"
+  },
+  "license": "MIT"
+}

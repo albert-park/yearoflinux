@@ -1,0 +1,18 @@
+{{!< default}}
+
+{{ header-gallery }}
+
+<div class="wrap">
+    <section class="blog-content">
+        {{#foreach posts}}
+            {{#if @first}}
+                {{> top-post-preview}}
+            {{ else }}
+                {{> full-width-post-preview }}
+            {{/if}}
+        {{/foreach}}
+        {{> widgets/digitalocean}}
+        {{pagination}}
+    </section>
+    {{> sidebar}}
+</div>

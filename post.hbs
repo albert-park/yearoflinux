@@ -1,0 +1,54 @@
+{{!< default}}
+
+<div class="wrap {{post_class}}">
+  <section class="blog-content">
+
+    <article>
+      {{#post}}
+
+        {{> post-header}}
+
+        <a class="post-meta" href="{{@blog.url}}">&larr; Back to the front page</a>
+
+        <h1 class="post-title">{{{title}}}</h1>
+        {{> post-meta }}
+        <section>{{> share }}</section>
+
+        {{#if image}}
+          <div style="background-image: url({{image}})"></div>
+        {{/if}}
+
+        {{> post-content}}
+
+        <footer class="post-footer">
+
+          {{> share }}
+     
+          <section class="read-next">
+            {{#prev_post}}
+              <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+                <section class="post">
+                  <h2>{{title}}</h2>
+                </section>
+              </a>
+            {{/prev_post}}
+          </section>
+
+          {{> widgets/digitalocean }}
+
+          {{!-- <a class="button-add large wide" data-toggle="modal" data-target="#blogsubscribe">Subscribe to Weekly Posts</a> --}}
+
+        </footer>
+
+        <section class="comments">
+          {{> comments}}
+        </section>
+
+      {{/post}}
+    </article>
+
+  </section>
+
+  {{> sidebar}}
+
+</div>

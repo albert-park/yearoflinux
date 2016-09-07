@@ -1,0 +1,16 @@
+{{!< default}}
+
+<div class="wrap">
+    <section class="blog-content">
+        {{!-- {{#foreach posts from="1" to="1"}} --}}
+        {{#foreach posts }}
+            {{> full-width-post-preview }}
+        {{/foreach}}
+
+ {{!--        {{#foreach posts from="2" to="5"}}
+            {{> half-width-post-preview }}
+        {{/foreach}} --}}
+        {{pagination}}
+    </section>
+    {{> sidebar}}
+</div>

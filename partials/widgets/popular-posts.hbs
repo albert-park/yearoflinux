@@ -1,0 +1,15 @@
+<section class="popular-posts widget">
+  <h3>In Case You Missed It</h3>
+  <ol>
+    {{#get "posts" filter="tags:news"}}
+      {{#foreach posts}}
+        <li>
+          <a href="{{url}}" >
+            <span class="number" aria-hidden="true"><img src="{{image}}"></span>
+            {{title}}
+          </a>
+        </li>   
+      {{/foreach}}
+    {{/get}}
+  </ol>
+</section>

@@ -1,0 +1,43 @@
+{
+  "name": "coralgs",
+  "version": "1.0.2",
+  "homepage": "http://coralgs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karlpablo/coralgs.git"
+  },
+  "authors": [
+    "Karl Pablo <me@karlpablo.com>"
+  ],
+  "description": "Coral! Grid System",
+  "main": "coral.scss",
+  "keywords": [
+    "coral",
+    "grid",
+    "coral grid",
+    "grid system",
+    "responsive grid",
+    "responsive grid system",
+    "mobile-first grid system"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  },
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.2",
+    "commit": "5b484a02cb4dd2d202c66e6ccbf2d672a86eb337"
+  },
+  "_source": "https://github.com/karlpablo/coralgs.git",
+  "_target": "^1.0.2",
+  "_originalSource": "coralgs"
+}

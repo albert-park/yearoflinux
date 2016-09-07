@@ -1,0 +1,410 @@
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+
+/*
+
+    0.  Includes
+    1.  Icons
+    2.  General
+    3.  Utilities
+    4.  General
+    5.  Single Post
+    6.  Pagination
+    7.  Footer
+    8.  Media Queries (Tablet)
+    9.  Media Queries (Mobile)
+    10. Others
+
+ */
+
+/* ==========================================================================
+   Global Content
+   ========================================================================== */
+
+::selection {
+  color: $selection-color;
+  background: #b3d5f3;
+  text-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.25em 0;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2em;
+  text-indent: -3px;
+  letter-spacing: -2px;
+
+  @include breakpoint(500px) {
+    font-size: 2.8rem;
+  }
+}
+
+h2 {
+  padding-top: 0;
+  font-size: 3rem;
+  line-height: 1.2em;
+  text-indent: -2px;
+  letter-spacing: -1px;
+  border: 0;
+
+  @include breakpoint(500px) {
+    font-size: 2.3rem;
+  }
+}
+
+h3 {
+  font-size: 2.5rem;
+
+  @include breakpoint(500px) {
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 2.2rem;
+
+  @include breakpoint(500px) {
+    font-size: 2rem;
+  }
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: underline;
+  color: $darkgrey;
+
+  &:hover {
+    text-decoration: none;
+    color: $link-hover-color;
+    box-shadow: none;
+  }
+}
+
+blockquote {
+  border-left: 5px solid lightgrey;
+  padding-left: 35px;
+  margin-left: 0;
+  font-size: 1.2em;
+
+  > p {
+    font-family: $quote-font;
+    font-style: italic;
+    letter-spacing: .01rem;
+    word-wrap: break-word;
+  }
+}
+
+.wrap {
+  position: relative;
+}
+
+.vertical {
+  position: relative;
+  top: -5%;
+  display: table-cell;
+  vertical-align: bottom;
+  width: 600px;
+}
+
+/* ==========================================================================
+   Global Layout
+   ========================================================================== */
+
+.page-wrapper {
+  padding: 50px 60px;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+
+.blog-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  min-height: 225px;
+  padding: 0;
+  text-align: center;
+  color: $white;
+  background: $header-color no-repeat center center;
+  background-size: cover;
+
+  h1 {
+    background-color: $blog-description-color;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 2.8rem;
+    letter-spacing: 0;
+    color: $white;
+    display: inline-block;
+    padding: .5rem 2rem;
+
+    @include breakpoint(500px) {
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint(650px) {
+      font-size: 2.2rem;
+    }
+
+    @include breakpoint(850px) {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+header.tag-header {
+  background-color: $blue;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0 60px;
+  h1 {
+    color: white;
+  }
+}
+
+.blog-content {
+  float: left;
+  font-size: 1.6rem;
+  width: 63.26531%;
+
+  @include breakpoint(500px) {
+    font-size: 1.5rem;
+  }
+
+  &.fullscreen {
+    width: 100%;
+  }
+}
+
+.blog-sidebar {
+  float: right;
+  width: 30.61224%;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0 0 15px 0;
+    font-size: 17px;
+    font-weight: $font-weight-thin;
+    line-height: 1.3em;
+  }
+}
+
+.widget {
+  padding: 25px 30px 30px;
+  margin-bottom: 50px;
+}
+
+@include breakpoint(1100px) {
+  .page-wrapper {
+    padding: 30px 40px;
+  }
+}
+
+@include breakpoint(1000px) {
+  .blog-content,
+  .blog-sidebar {
+    float: none;
+    width: 100%;
+  }
+}
+
+@include breakpoint(850px) {
+  .page-wrapper {
+    padding: 8% 11%;
+  }
+
+  .blog-content {
+    margin-right: 0;
+  }
+
+  .blog-sidebar {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@include breakpoint(650px) {
+  .page-wrapper {
+    padding: 6% 9%;
+  }
+}
+
+@include breakpoint(400px) {
+  .page-wrapper {
+    padding: 15px;
+  }
+}
+
+.post {
+  margin-bottom: 40px;
+  border-bottom: darken($lightgrey, 5%) 1px dashed;
+
+  @include breakpoint(500px) {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.post-title {
+  margin: 0;
+}
+
+.post-title a {
+  text-decoration: none;
+}
+
+.post-excerpt p {
+  margin: 0 0 2.6rem 0;
+
+  @include breakpoint(500px) {
+    margin: 2rem 0;
+  }
+}
+
+.post-meta {
+  margin: 5px 0;
+  font-size: 1.4rem;
+  color: #9eabb3;
+
+  .author-img {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-right: 9px;
+
+    @include breakpoint(500px) {
+      display: none;
+    }
+  }
+}
+
+.post-preview-wrapper {
+  margin-top: 2.6rem;
+  @include breakpoint(650px) {
+    margin-top: 0;
+  }
+  .post-preview-image {
+    display: inline-block;
+    width: 30%;
+    height: 151px;
+    max-height: 400px;
+    margin-right: 10px;
+    border: 1px solid lightgrey;
+    object-fit: cover;
+    @include breakpoint(650px) {
+      width: 100%;
+    }
+  }
+  .post-preview-text {
+    display: inline-block;
+    width: 65%;
+    @include breakpoint(650px) {
+      width: 100%;
+      p {
+        margin: 1.1rem 0;
+        height: 40px;
+      }
+    }
+    section.post-excerpt {
+      height: 100px;
+      &.top-post-excerpt {
+        height: 60px;
+        @include breakpoint(768px) {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+.half-post-preview-wrapper {
+  display: inline-block;
+  width: 48%;
+  margin-left: 10px;
+  img {
+    width: 100%;
+    height: 200px;
+
+  }
+  .post-preview-text {
+    width: 100%;
+  }
+}
+
+.author-img {
+  border-radius: 100%;
+}
+
+.post-meta a {
+  text-decoration: none;
+  color: #9eabb3;
+}
+
+.post-meta a:hover {
+  text-decoration: underline;
+}
+
+.more-links {
+  margin: 2em 0;
+
+  @include breakpoint(500px) {
+    margin: 1.6em 0;
+
+    .right {
+      display: none;
+    }
+  }
+}
+
+.read-more {
+  min-height: 0;
+  padding: .3em .5em;
+  font-size: 10px;
+  line-height: 12px;
+  vertical-align: top;
+
+  @include breakpoint(500px) {
+    padding: 1em;
+    margin-top: 10px;
+  }
+}
+
+//misc hack - no idea why this is needed, but it is
+@media (min-width: 768px) {
+  .navbar-collapse.closed {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+}

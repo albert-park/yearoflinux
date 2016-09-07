@@ -1,0 +1,19 @@
+        <article class="{{post_class}}">
+            <header class="post-header">
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                {{> post-meta}}
+            </header>
+            <div class="post-preview-wrapper">
+                            <img src="{{image}}" alt="" class="post-preview-image">
+                <div class="post-preview-text">
+                <section class="post-excerpt">
+                        <p>{{excerpt characters="180"}}&hellip;</p>
+                    </section>
+                    <footer class="more-links">
+                        <a class="read-more button-save" href="{{url}}">Read More</a>
+                        {{!> share/post}}
+                    </footer>
+                </div>
+            </div>
+
+        </article>

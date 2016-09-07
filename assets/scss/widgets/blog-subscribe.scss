@@ -1,0 +1,22 @@
+/*  Widget */
+
+.blog-subscribe {
+  padding: 0;
+
+  text-align: center;
+
+  h3 {
+    font-weight: bold;
+
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 1rem 0 2.5rem;
+
+    font-size: 1.6rem;
+    font-weight: 200;
+
+    color: $brown;
+  }
+}

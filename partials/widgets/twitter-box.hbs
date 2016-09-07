@@ -1,0 +1,13 @@
+{{! TODO: Extract twitter handle slug as Ghost variable }}
+{{! TODO: Extract twitter description as Ghost variable }}
+
+<section class="twitter-box twitter-box-main widget">
+    <div class="twitter-box-profilepic"><img src="{{asset "images/logo.png"}}" alt="Twitter profile picture" /></div>
+    <img class="twitter-box-coverpic" src="{{asset "images/distros.png"}}" alt="Twitter cover image" nopin="nopin" />
+    <div class="twitter-box-content">
+        <h4>{{@blog.title}}</h4>
+        <a href="{{twitter_url}}">{{twitter_url}}</a>
+        <p>All of the latest Linux news, software reviews, how-tos, and more.</p>
+        <a href="{{twitter_url}}" class="twitter-follow-button" data-show-count="true">Seguir @zombeats_es</a>
+    </div>
+</section>

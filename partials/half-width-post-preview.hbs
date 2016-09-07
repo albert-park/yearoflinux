@@ -1,0 +1,26 @@
+<div class="half-post-preview-wrapper">
+  <article class="{{post_class}}">
+	  <img src="{{image}}" alt="" class="post-preview-image">
+    <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        <section class="post-meta">
+            <span class="author-name">by {{author}}</span>
+            &bull;
+            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>
+            <span class="tags">{{tags prefix="• " separator=" "}}</span>
+        </section>
+    </header>
+    <div class="post-preview-wrapper">
+        <div class="post-preview-text">
+        {{!--     <section class="post-excerpt">
+                <p>{{excerpt words="25"}}&hellip;</p>
+            </section> --}}
+            <footer class="more-links">
+                <a class="read-more button-save" href="{{url}}">Read More</a>
+                {{!> share/post}}
+            </footer>
+        </div>
+    </div>
+
+</article>
+</div>

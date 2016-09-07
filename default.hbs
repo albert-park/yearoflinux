@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{meta_title}}</title>
+    {{> meta}}
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,400,200" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bloggy.css"}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.2.1/flickity.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    {{ghost_head}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.2.1/flickity.pkgd.min.js"></script>  
+    <script type="text/javascript" src="{{asset "js/bloggy.en_US.js"}}"></script>
+  </head>
+  <body class="{{body_class}}">
+    <div id="fb-root"></div>
+    {{> widgets/subscribe-banner}}
+    <header id="global-header" class="global-header navbar">
+      {{navigation}}
+    </header>
+    <main role="main">
+      {{> header-gallery}}  
+      {{#tag}}
+        <header class="tag-header">
+            <div class="vertical">
+                <h1>Articles filed under {{name}}</h1>
+            </div>
+      </header>
+      {{/tag}}
+      {{#author}}
+      <header class="tag-header">
+        <div class="vertical">
+            <h1>Articles by {{name}}</h1>
+        </div>
+      </header>
+      {{/author}}
+      <div class="page-wrapper">
+        {{{body}}}
+        <div class="clearfix"></div>
+      </div>
+    </main>
+    {{> subscribe-modal }}
+    <div class="clearfix"></div>
+    {{> footer}}
+    {{ghost_foot}}
+    {{> google-analytics}}
+    {{> share/scripts/twitter}}
+  <script type="text/javascript" src="{{asset "js/src/prism.js"}}"></script>
+  <script id="dsq-count-scr" src="//yearoflinux.disqus.com/count.js" async></script>
+    
+    
+  </body>
+</html>

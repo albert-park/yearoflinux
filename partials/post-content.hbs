@@ -1,0 +1,9 @@
+<section class="post-content">
+  {{#if image}}
+    {{#unless featured}}
+      <img src="{{image}}" alt="Post image" class="post-cover-image" />
+      {{!-- <div style="background-image: url({{image}})"></div> --}}
+    {{/unless}}
+  {{/if}}
+  {{content}}
+</section>

@@ -1,0 +1,48 @@
+.header-gallery {
+	max-width: 1300px;
+	margin: 0 auto;
+	.flickity-viewport {
+		min-height: 225px;
+	}
+	header.blog-header {
+		position: fixed;
+	}
+	@include breakpoint(650px) {
+		display: none;
+	}
+	ol.flickity-page-dots {
+		bottom: 5%;
+		left: 90%;
+		width: 100px;
+		@include breakpoint(1024px) {
+			left: 80%;
+			
+		}
+		.dot {
+			background: white;
+			border: 1px solid grey;
+			&.is-selected {
+				border: 1px solid $blue;
+				background: $blue;
+			}
+		}
+	}
+	.flickity-prev-next-button {
+		top: 62%;
+		width: 1%;
+		height: 50px;
+		border-radius: 5%;
+		vertical-align: middle;
+		&:hover {
+			background: darkgrey;
+		}
+		&.previous {
+			left: 0;
+		}
+		&.next {
+			right: 0;
+			transition: all 100ms ease;
+		}
+	}
+
+}

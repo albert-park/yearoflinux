@@ -35,3 +35,4 @@ coverage
 .node_history
 .sass-cache/
 assets/vendor
+bower_components

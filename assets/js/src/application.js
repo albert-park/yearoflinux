@@ -3,12 +3,11 @@
 
   $(document).on('ready', function() {
     $('.header-gallery').flickity({
-      cellAlign: 'center',
-      autoPlay: 2500,
-      pauseAutoPlayOnHover: false,
-      wrapAround: true,
+      cellAlign: 'left',
       draggable: false,
       lazyLoad: 1,
+      prevNextButtons: false,
+      pageDots: false
     })
   });
 

@@ -141,34 +141,26 @@ blockquote {
 .blog-header {
   position: relative;
   display: table;
-  width: 100%;
+  width: 33.33%;
   min-height: 225px;
   padding: 0;
-  text-align: center;
+  text-align: left;
   color: $white;
   background: $header-color no-repeat center center;
   background-size: cover;
 
   h1 {
     background-color: $blog-description-color;
-    max-width: 640px;
+    max-width: 70%;
     margin: 0 auto;
-    font-size: 2.8rem;
+    font-size: 1.4em;
     letter-spacing: 0;
     color: $white;
     display: inline-block;
     padding: .5rem 2rem;
-
-    @include breakpoint(500px) {
-      font-size: 1.8rem;
-    }
-
-    @include breakpoint(650px) {
-      font-size: 2.2rem;
-    }
-
-    @include breakpoint(850px) {
-      font-size: 2.6rem;
+    
+    @include breakpoint($tablet) {
+      max-width: 100%;
     }
   }
 }

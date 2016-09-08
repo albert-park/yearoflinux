@@ -5,7 +5,6 @@ $shadow                      : rgba(0, 0, 0, .5) 0 1px 5px;
 $default-transition-duration : 0.3s;
 
 // Breakpoint - http://breakpoint-sass.com/
-// @import "../vendor/compass-breakpoint/stylesheets/breakpoint";
 @import "bower_components/compass-breakpoint/stylesheets/breakpoint";
 @include breakpoint-set('default feature', max-width);
 
